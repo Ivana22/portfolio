@@ -1,18 +1,31 @@
 <template>
-  <div class="name">
-    <p>hi, my name is Ivana</p>
-    <p>and I'm a Web Developer...<span>|</span></p>
+  <div class="wrapper">
+    <div class="name">
+      <p>hi, my name is Ivana</p>
+      <p>and I'm a Web Developer...<span>|</span></p>
+    </div>
+    <div class="social">
+      <a href="https://www.linkedin.com/in/ivana-trpkova-78889510a/"
+        ><img src="../../assets/linkedin1.png"
+      /></a>
+      <a href="https://github.com/Ivana22"
+        ><img src="../../assets/github1.png"
+      /></a>
+    </div>
   </div>
+  <homepage-blobs />
 </template>
 
 <script>
+import HomepageBlobs from "../HomepageBlobs/HomepageBlobs.vue";
 export default {
-  name: "IntroText",
+  components: { HomepageBlobs },
+  name: "HomePage",
 };
 </script>
 
 <style scoped>
-.name {
+.wrapper {
   position: absolute;
   right: 17%;
   top: 45%;
@@ -22,6 +35,12 @@ export default {
   align-items: flex-start;
   padding: 20px 20px 50px 20px;
   z-index: 9;
+}
+
+.name {
+  position: relative;
+  padding-bottom: 15px;
+  text-align: left;
 }
 .name p {
   color: white;
@@ -45,11 +64,11 @@ export default {
 .name::before {
   content: "";
   width: 100%;
-  height: 14%;
+  height: 3%;
   background: linear-gradient(45deg, #9d316e, #de2d3e);
   position: absolute;
-  left: 2px;
-  bottom: 0%;
+  left: 0;
+  bottom: 0;
 }
 
 @keyframes type {
@@ -74,6 +93,22 @@ export default {
   to {
     opacity: 0;
   }
+}
+
+.social {
+  display: flex;
+  align-self: end;
+}
+
+.social img {
+  width: 40px;
+  height: 40px;
+  padding: 10px 5px;
+}
+
+.social img:hover {
+  cursor: pointer;
+  /* animation: hover 0.21s steps(60, end); */
 }
 
 @media screen and (max-width: 1430px) {
