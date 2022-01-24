@@ -1,7 +1,7 @@
 <template>
   <div id="particles-js">
     <Menu></Menu>
-    <slot name="homepage"></slot>
+    <slot></slot>
   </div>
 </template>
 

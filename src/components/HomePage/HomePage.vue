@@ -1,25 +1,28 @@
 <template>
-  <div class="wrapper">
-    <div class="name">
-      <p>hi, my name is Ivana</p>
-      <p>and I'm a Web Developer...<span>|</span></p>
+  <screen-particles>
+    <div class="wrapper">
+      <div class="name">
+        <p>hi, my name is Ivana</p>
+        <p>and I'm a Web Developer...<span>|</span></p>
+      </div>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/ivana-trpkova-78889510a/"
+          ><img src="../../assets/linkedin1.png"
+        /></a>
+        <a href="https://github.com/Ivana22"
+          ><img src="../../assets/github1.png"
+        /></a>
+      </div>
     </div>
-    <div class="social">
-      <a href="https://www.linkedin.com/in/ivana-trpkova-78889510a/"
-        ><img src="../../assets/linkedin1.png"
-      /></a>
-      <a href="https://github.com/Ivana22"
-        ><img src="../../assets/github1.png"
-      /></a>
-    </div>
-  </div>
-  <homepage-blobs />
+    <homepage-blobs />
+  </screen-particles>
 </template>
 
 <script>
 import HomepageBlobs from "../HomepageBlobs/HomepageBlobs.vue";
+import ScreenParticles from "../ScreenParticles/ScreenParticles.vue";
 export default {
-  components: { HomepageBlobs },
+  components: { HomepageBlobs, ScreenParticles },
   name: "HomePage",
 };
 </script>

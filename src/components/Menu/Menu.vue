@@ -18,8 +18,13 @@ export default {
     },
   },
   methods: {
-    makeActive: function (item) {
-      this.active = item;
+    makeActive: function (e) {
+      document.querySelectorAll(".menu a").forEach((element) => {
+        element.style.display = "none";
+        element.classList.remove("active");
+      });
+      e.target.style.display = "block";
+      e.target.classList.add("active");
     },
   },
 };
@@ -34,6 +39,7 @@ export default {
   align-items: flex-start;
   justify-content: flex-end;
   width: 100%;
+  top: 3%;
 }
 @media screen and (max-width: 768px) {
   .menu {

@@ -1,6 +1,7 @@
 <template>
   <div class="about">
-    <div class="image"></div>
+    <button class="content-close">X</button>
+    <div class="image"><img src="../../assets/profile.jpg" /></div>
     <div class="intro">
       <p>
         Pellentesque habitant morbi tristique senectus et netus et malesuada
@@ -38,4 +39,40 @@
 export default {};
 </script>
 
-<style scoped></style>
+<style scoped>
+.about {
+  background: linear-gradient(45deg, #0947db, #07d89d);
+  min-height: 100%;
+  display: flex;
+  padding: 0 15%;
+  align-items: center;
+  gap: 5%;
+}
+.content-close {
+  position: absolute;
+  bottom: 25px;
+  right: 40px;
+  color: #fff;
+  border: 0;
+  border-radius: 90% 70% 88% 69%;
+  padding: 10px 15px;
+  height: 80px;
+  width: 70px;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 3px 0 9px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: box-shadow 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+}
+.content-close:focus {
+  outline: 0;
+}
+.content-close:hover {
+  box-shadow: 0 0 0 7px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+}
+img {
+  width: auto;
+  height: 400px;
+  border-radius: 50%;
+}
+</style>
